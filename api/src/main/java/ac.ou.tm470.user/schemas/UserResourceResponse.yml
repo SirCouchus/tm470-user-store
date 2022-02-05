@@ -1,0 +1,65 @@
+type: object
+required:
+  - id
+  - schemas
+  - meta
+  - userName
+properties:
+  schemas:
+    type: string
+  id:
+    type: string
+  meta:
+    $ref: 'Meta.yml'
+  userName:
+    type: string
+  name:
+    $ref: 'Name.yml'
+  displayName:
+    type: string
+  nickName:
+    type: string
+  profileUrl:
+    type: string
+  title:
+    type: string
+  userType:
+    type: string
+  preferredLanguage:
+    type: string
+  locale:
+    type: string
+  timezone:
+    type: string
+  active:
+    type: boolean
+  password:
+    type: string
+  emails:
+    type: array
+    items:
+      $ref: 'Email.yml'
+  phoneNumbers:
+    type: array
+    items:
+      $ref: 'PhoneNumber.yml'
+  addresses:
+    type: array
+    items:
+      $ref: 'Address.yml'
+  groups:
+    type: array
+    items:
+      $ref: 'Group.yml'
+  entitlements:
+    type: array
+    items:
+      $ref: 'Entitlement.yml'
+  roles:
+    type: array
+    items:
+      $ref: 'Role.yml'
+  x509Certificates:
+    type: array
+    items:
+      $ref: 'x509Certificate.yml'

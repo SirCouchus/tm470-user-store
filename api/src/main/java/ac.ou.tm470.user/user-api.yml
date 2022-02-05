@@ -1,0 +1,195 @@
+openapi: 3.0.1
+info:
+  title: user-store
+  description: APIs belonging to the user store
+  version: '0.1'
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /api/Users:
+    get:
+      operationId: getUserResources
+      description: Retrieve all user resources
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResourcesResponse'
+              examples:
+                UserResourcesResponse:
+                  $ref: '#/components/examples/userResourcesResponse'
+        '400':
+          description: Bad Request
+        '403':
+          description: Authenticated user is forbidden
+        '401':
+          description: No authentication information found
+        '404':
+          description: Not found
+    post:
+      operationId: createUserResource
+      summary: Create a SCIM Resource representing a User
+      requestBody:
+        description: Create user SCIM request body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserResourceRequest'
+            examples:
+              CreateUserResource:
+                $ref: '#/components/examples/createUserResourceRequest'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResourceResponse'
+              examples:
+                UserResourceResponse:
+                  $ref: '#/components/examples/userResourceResponse'
+        '400':
+          description: Bad Request
+        '403':
+          description: Authenticated user is forbidden
+        '401':
+          description: No authentication information found
+        '404':
+          description: Not Found
+
+  /api/Users/existing/{username}:
+    get:
+      operationId: checkUserExists
+      description: Checks whether a User Resource exists with specified username
+      parameters:
+        - in: path
+          name: username
+          schema:
+            type: string
+          required: true
+      responses:
+        '204':
+          description: User exists
+        '404':
+          description: User does not exist
+        '400':
+          description: Bad Request
+        '403':
+          description: Authenticated user is forbidden
+        '401':
+          description: No authentication information found
+
+  /api/Users/{id}:
+    get:
+      operationId: getUserResource
+      description: Retrieve a single User Resource
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResourceResponse'
+              examples:
+                UserResourcesResponse:
+                  $ref: '#/components/examples/userResourceResponse'
+        '400':
+          description: Bad Request
+        '403':
+          description: Authenticated user is forbidden
+        '401':
+          description: No authentication information found
+        '404':
+          description: Not found
+
+    delete:
+      operationId: deleteUserResource
+      description: Delete a SCIM Resource representing a User
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '207':
+          description: User deleted successfully
+        '400':
+          description: Bad Request
+        '403':
+          description: Authenticated user is forbidden
+        '401':
+          description: No authentication information found
+        '404':
+          description: Not Found
+
+    put:
+      operationId: updateUserResource
+      description: Updates a SCIM Resource representing a User
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      requestBody:
+        description: Update user SCIM request body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUserResourceRequest'
+            examples:
+              UpdateUserResource:
+                $ref: '#/components/examples/updateUserResourceRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResourceResponse'
+              examples:
+                UserResourcesResponse:
+                  $ref: '#/components/examples/userResourceResponse'
+        '400':
+          description: Bad Request
+        '403':
+          description: Authenticated user is forbidden
+        '401':
+          description: No authentication information found
+        '404':
+          description: Not Found
+
+
+components:
+  schemas:
+    UserResourcesResponse:
+      type: array
+      items:
+        $ref: 'schemas/UserResourceResponse.yml'
+    UserResourceResponse:
+      $ref: 'schemas/UserResourceResponse.yml'
+    CreateUserResourceRequest:
+      $ref: 'schemas/CreateUserResource.yml'
+    UpdateUserResourceRequest:
+      $ref: 'schemas/UpdateUserResource.yml'
+
+  examples:
+    userResourcesResponse:
+      $ref: 'examples/userResourcesResponse.json'
+    userResourceResponse:
+      $ref: 'examples/userResourceResponse.json'
+    createUserResourceRequest:
+      $ref: 'examples/createUserResource.json'
+    updateUserResourceRequest:
+      $ref: 'examples/updateUserResource.json'

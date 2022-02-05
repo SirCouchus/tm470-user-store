@@ -1,0 +1,10 @@
+type: object
+properties:
+  value:
+    type: string
+  ref:
+    type: string
+  display:
+    type: string
+  type:
+    type: string

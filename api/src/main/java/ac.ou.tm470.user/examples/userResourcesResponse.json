@@ -1,0 +1,41 @@
+{
+  "items":
+  [
+    {
+      "schemas":["urn:ietf:params:scim:schemas:core:2.0:User"],
+      "id":"2819c223-7f76-453a-919d-413861904646",
+      "meta":{
+        "resourceType":"User",
+        "created":"2019-08-01T21:32:44.882Z",
+        "lastModified":"2019-08-01T21:32:44.882Z",
+        "location":
+        "https://example.com/v2/Users/2819c223-7f76-453a-919d-413861904646",
+        "version":"W\/\"e180ee84f0671b1\""
+      },
+      "name":{
+        "formatted":"Ms. Barbara J Jensen III",
+        "familyName":"Jensen",
+        "givenName":"Barbara"
+      },
+      "userName":"bjensen"
+    },
+    {
+      "schemas":["urn:ietf:params:scim:schemas:core:2.0:User"],
+      "id":"2345c993-6g76-439l-987f-45586177844",
+      "meta":{
+        "resourceType":"User",
+        "created":"2018-08-01T21:32:44.882Z",
+        "lastModified":"2018-08-01T21:32:44.882Z",
+        "location":
+        "https://example.com/v2/Users/2345c993-6g76-439l-987f-45586177844",
+        "version":"W\/\"e180ee84f0671b1\""
+      },
+      "name":{
+        "formatted":"Mr. Morgan R. O'Rely",
+        "familyName":"O'Rely",
+        "givenName":"Morgan"
+      },
+      "userName":"orelyM"
+    }
+  ]
+}

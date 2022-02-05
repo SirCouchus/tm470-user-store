@@ -1,0 +1,12 @@
+type: object
+properties:
+  resourceType:
+    type: string
+  created:
+    type: string
+  lastModified:
+    type: string
+  location:
+    type: string
+  version:
+    type: string

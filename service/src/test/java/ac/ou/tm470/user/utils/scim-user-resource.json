@@ -1,0 +1,90 @@
+{
+  "userName": "bjensen",
+  "name":{
+    "formatted":"Ms. Barbara J Jensen III",
+    "familyName":"Jensen",
+    "givenName":"Barbara"
+  },
+  "displayName": "bjensen",
+  "nickName": "bj",
+  "profileUrl": "http://localhost:8080:/api/Users/007",
+  "title": "Ms.",
+  "userType": "User",
+  "preferredLanguage": "en_GB",
+  "locale": "GB",
+  "timezone": "GMT",
+  "active": true,
+  "password": "password",
+  "emails": [
+    {
+      "value": "bjensen@example.test",
+      "display": "bjensen Home Email",
+      "type": "home",
+      "primary": true
+    },
+    {
+      "value": "bjensen@business.test",
+      "display": "bjensen Business Email",
+      "type": "work",
+      "primary": false
+    }
+  ],
+  "phoneNumbers": [
+    {
+      "value": "0389248428",
+      "display": "bjensen Home Phone",
+      "type": "home",
+      "primary": true
+    },
+    {
+      "value": "7772343883",
+      "display": "bjensen Business Phone",
+      "type": "work",
+      "primary": false
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "38 Farm Close, Oakdale",
+      "streetAddress": "38 Farm Close, Oakdale",
+      "locality": "Blackwood",
+      "region": "Caerphilly",
+      "postalCode": "NP12 0DS",
+      "country": "Wales",
+      "type": "home",
+      "primary": true
+    }
+  ],
+  "groups": [
+    {
+      "value": "",
+      "ref": "",
+      "display": "",
+      "type": ""
+    }
+  ],
+  "entitlements": [
+    {
+      "value": "",
+      "display": "",
+      "type": "",
+      "primary": true
+    }
+  ],
+  "roles": [
+    {
+      "value": "",
+      "display": "",
+      "type": "",
+      "primary": true
+    }
+  ],
+  "x509Certificates": [
+    {
+      "value": "",
+      "display": "",
+      "type": "",
+      "primary": true
+    }
+  ]
+}

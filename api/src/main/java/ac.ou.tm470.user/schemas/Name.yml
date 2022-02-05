@@ -1,0 +1,14 @@
+type: object
+properties:
+  formatted:
+    type: string
+  familyName:
+    type: string
+  givenName:
+    type: string
+  middleName:
+    type: string
+  honorificPrefix:
+    type: string
+  honorificSuffix:
+    type: string

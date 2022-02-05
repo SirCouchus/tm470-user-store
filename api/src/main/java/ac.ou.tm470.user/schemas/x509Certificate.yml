@@ -1,0 +1,11 @@
+type: object
+properties:
+  value:
+    type: string
+    format: byte
+  display:
+    type: string
+  type:
+    type: string
+  primary:
+    type: boolean

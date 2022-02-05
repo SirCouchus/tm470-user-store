@@ -1,0 +1,18 @@
+type: object
+properties:
+  formatted:
+    type: string
+  streetAddress:
+    type: string
+  locality:
+    type: string
+  region:
+    type: string
+  postalCode:
+    type: string
+  country:
+    type: string
+  type:
+    type: string
+  primary:
+    type: boolean
